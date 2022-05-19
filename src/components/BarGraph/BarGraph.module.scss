@@ -1,0 +1,21 @@
+.graph {
+    h2{
+        text-align: center;
+        display: flex;
+        justify-content: space-evenly;
+    }
+  .imgBg {
+    position: absolute;
+    // width: 100%;
+    height: auto;
+    opacity: 0.3;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scaleX(1.5);
+    z-index: -1;
+  }
+  .barGraph {
+    text-align: center;
+    position: relative;
+  }
+}

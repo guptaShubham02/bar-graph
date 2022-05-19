@@ -1,0 +1,163 @@
+$width-full: 100%;
+$height-full: 100%;
+$color-lightBlack: #2f3351;
+// $breakpoint-mobileS: 320px;
+// $breakpoint-mobileL: 425px;
+$breakpoint-tablet: 768px;
+$breakpoint-laptop: 1024px;
+
+.signup {
+  display: flex;
+  justify-content: space-between;
+  height: $height-full;
+
+  .signupPic {
+    width: $width-full;
+    overflow: hidden;
+    background-color: #f7f7f7;
+    position: relative;
+    .signupPicDetails {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      .imgBg {
+        width: 100%;
+        height: auto;
+      }
+      .picDetails {
+        width: 350px;
+        text-align: center;
+        margin: 1.5rem auto 0 auto;
+        color: grey;
+        cursor: default;
+      }
+    }
+  }
+  .signupAccount {
+    width: $width-full;
+    padding: 1rem;
+    background-color: #fff;
+    overflow-x: auto;
+    position: relative;
+    .signupAccountBg {
+      display: none;
+    }
+    .signupAccountBody {
+      padding: 1rem 0 0 5rem;
+      position: relative;
+      .heading {
+        color: $color-lightBlack;
+      }
+      .label {
+        color: #656666;
+        display: block;
+        margin: 2rem 0 0.4rem 0;
+      }
+      .input {
+        display: block;
+        width: 20rem;
+        height: 2.5rem;
+        outline: none;
+        border: 1px solid #dedede;
+        font-size: 1.1rem;
+        color: #3e3e3e;
+      }
+      .inputPhone {
+        width: 10rem;
+      }
+      .invalid {
+        border-color: orangered;
+        color: orangered;
+      }
+      .invalidText {
+        color: orangered;
+        margin: 5px 0;
+        font-size: 0.82rem;
+      }
+      .TandC {
+        color: $color-lightBlack;
+        margin: 1.5rem 0 0 0;
+      }
+      .btn {
+        display: block;
+        background-color: #008be8;
+        margin: 1.5rem 0;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $breakpoint-laptop) {
+  .signup {
+    .signupAccount {
+      width: $width-full;
+      padding: 1rem;
+      .signupAccountBody {
+        padding: 0;
+        .label {
+          color: #656666;
+          display: block;
+          margin: 1.5rem 0 0.4rem 0;
+        }
+        .input {
+          width: 18rem;
+          height: 2.2rem;
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $breakpoint-tablet) {
+  .signup {
+    .signupPic {
+      display: none;
+    }
+    .signupAccount {
+      width: $width-full;
+      padding: 1rem;
+      background-color: #f5f7f8;
+      color: #2d2d2d;
+      .signupAccountBg {
+        display: inline-block;
+        position: absolute;
+        width: 100%;
+        height: auto;
+        opacity: 0.5;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+      .signupAccountBody {
+        padding: 0;
+        .label {
+          color: #656666;
+          display: block;
+          margin: 1.5rem 0 0.4rem 0;
+        }
+        .input {
+          width: 18rem;
+          height: 2.2rem;
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-height: $breakpoint-tablet) {
+  .signup {
+    .signupAccount {
+      .signupAccountBody {
+        padding: 0;
+        .label {
+          margin: 0.9rem 0 0.4rem 0;
+        }
+        .TandC {
+          margin: 1rem 0 0 0;
+        }
+      }
+    }
+  }
+}
